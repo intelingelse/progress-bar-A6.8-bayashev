@@ -1,13 +1,18 @@
 let progressBar = $("#myProgressBar");
+let progressBarWidth = 0;
+let progressWidth = $(".progress").width();
 
 
 
 $("#plusOne").click(function(){
-    progressBar.css("width", "+=1%");
+    progressBarWidth += progressWidth*0.01;
+    progressBar.width(progressBarWidth + progressWidth*0.01);
 });
 $("#plusThree").click(function(){
-    progressBar.css("width", "+=3%");
+    progressBarWidth += progressWidth*0.03;
+    progressBar.width(progressBarWidth + progressWidth*0.03);
 });
 $('#plusSeven').click((function(){
-    progressBar.css("width", "+=7%");
+    progressBarWidth += progressWidth*0.07;
+    progressBar.width(progressBarWidth + progressWidth*0.07);
 }));
