@@ -6,14 +6,17 @@ let currentProgressBarWidth = 0;
 
 
 $("#plusOne").click(function(){
-    progressBar.width(currentProgressBarWidth + progressWidth*0.01);
-    currentProgressBarWidth += progressWidth*0.01;
+    // progressBar.width(currentProgressBarWidth + progressWidth*0.01);
+    // currentProgressBarWidth += progressWidth*0.01;
+    currentProgressBarWidth+=1;
+    progressBar.width(`${currentProgressBarWidth}%`);
+    console.log(currentProgressBarWidth);
 });
 $("#plusThree").click(function(){
-    progressBar.width(currentProgressBarWidth + progressWidth*0.03);
-    currentProgressBarWidth += progressWidth*0.03;
+    currentProgressBarWidth+=3;
+    progressBar.width(`${currentProgressBarWidth}%`);
 });
 $('#plusSeven').click((function(){
-    progressBar.width(currentProgressBarWidth + progressWidth*0.07);
-    currentProgressBarWidth = currentProgressBarWidth + progressWidth*0.07;
+    currentProgressBarWidth+=7;
+    progressBar.width(`${currentProgressBarWidth}%`);
 }));
