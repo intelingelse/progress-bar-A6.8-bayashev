@@ -1,5 +1,4 @@
 let progressBar = $("#myProgressBar");
-let progressWidth = $(".progress").width();
 let currentProgressBarWidth = 0;
 
 
